@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  sample-prod:
+    container_name: react-test-application-prod
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+    ports:
+      - '1337:80'

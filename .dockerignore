@@ -1,0 +1,7 @@
+node_modules
+dist
+.dockerignore
+dockerfile
+dockerfile.prod
+docker-compose.yaml
+docker-compose.prod.yamlS
