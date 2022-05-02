@@ -1,13 +1,12 @@
-#root, .app {
+/* #root, .app {
     height: 100%;
-}
-
+} */
+/* 
 .page-content {
     height: 100%;
-}
+} */
 
 .route-content {
     padding: 10px;
-    height: 100%;
-    background-color: antiquewhite;
+    /* height: 100%; */
 }
