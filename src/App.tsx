@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import logo from './logo.svg'
 import './App.css';
 
 function Home() {
@@ -19,7 +18,6 @@ function App() {
   return (
     <div className='app'>
       <header className='App-header'>
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
