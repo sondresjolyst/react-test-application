@@ -15,3 +15,11 @@ You will also see any lint errors in the console.
 ### `npm run build`
 
 Builds the app for production to the `dist` folder.
+
+## Docker build
+
+### Build and test dev
+`docker-compose -f docker-compose.yaml up -d --build`
+
+### Build and test production
+`docker-compose -f docker-compose.prod.yaml up -d --build`
