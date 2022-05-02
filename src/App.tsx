@@ -1,50 +1,33 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import './App.css';
-
-function Home() {
-  return (
-    <h1>test</h1>
-  )
-}
-
-function Foo() {
-  return (
-    <h2>foo</h2>
-  )
-}
+import { Home } from './components/Home/home';
+import { Foo } from './components/Foo/foo';
 
 function App() {
   return (
     <div className='app'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >       Learn React     </a>
-      </header>
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/foo">foo</Link>
-              </li>
-            </ul>
+        <div className='page-content'>
+          <nav className='uk-navbar-container' uk-navbar>
+            <div className='uk-navbar-left'>
+              <a className='uk-navbar-item uk-logo'>React Test</a>
+              <ul className='uk-navbar-nav'>
+                <li className='uk-active'>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/foo">foo</Link>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/foo" element={<Foo />}></Route>
-          </Routes>
-
+          <div className='route-content'>
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/foo" element={<Foo />}></Route>
+            </Routes>
+          </div>
         </div>
       </Router>
     </div>

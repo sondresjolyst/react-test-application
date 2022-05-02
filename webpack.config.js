@@ -2,12 +2,15 @@ const prod = process.env.NODE_ENV === 'production';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
     mode: prod ? 'production' : 'development',
     entry: './src/index.tsx',
     output: {
-        path: __dirname + '/dist/',
+        // path: __dirname + '/dist/',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -24,6 +27,9 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     devtool: prod ? undefined : 'source-map',
     plugins: [
