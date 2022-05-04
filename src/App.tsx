@@ -9,7 +9,7 @@ function App() {
     <div className='app'>
       <Router>
         <div className='page-content'>
-          <nav className='uk-navbar-container' uk-navbar>
+          <nav className='uk-navbar-container' uk-navbar="true">
             <div className='uk-navbar-left'>
               <a className='uk-navbar-item uk-logo'>React Test</a>
               <ul className='uk-navbar-nav'>
@@ -30,6 +30,11 @@ function App() {
           </div>
         </div>
       </Router>
+      <footer className='uk-section-default uk-padding uk-padding-remove-bottom'>
+      <div className="uk-text-center">
+        <p>React-Test 2022</p>
+      </div>
+      </footer>
     </div>
   );
 }
