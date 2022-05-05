@@ -1,0 +1,16 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: sondre-react-test
+spec:
+  environments:
+    - name: prod
+      build:
+        from: production
+  components:
+    - name: frontend
+      src: ./
+      ports:
+       - name: http
+         port: 80
+      publicPort: http
