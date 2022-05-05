@@ -4,7 +4,7 @@ metadata:
   name: sondre-react-test
 spec:
   environments:
-    - name: prod
+    - name: production
       build:
         from: main
   components:
