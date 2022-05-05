@@ -13,8 +13,8 @@ interface Data {
 }
 
 interface Headers {
-  "cache-control": string;
-  "content-type": string;
+  'cache-control': string;
+  'content-type': string;
 }
 
 interface Transitional {
