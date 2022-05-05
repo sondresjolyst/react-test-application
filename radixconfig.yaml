@@ -9,8 +9,9 @@ spec:
         from: main
   components:
     - name: frontend
+      dockerfile: dockerfile.prod
       src: ./
       ports:
        - name: http
-         port: 80
+         port: 1024
       publicPort: http
