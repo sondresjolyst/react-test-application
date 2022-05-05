@@ -10,7 +10,6 @@ spec:
   components:
     - name: frontend
       dockerfile: prod.Dockerfile
-      src: ./
       ports:
        - name: http
          port: 1024
