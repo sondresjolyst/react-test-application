@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: sondre-react-test
+  name: sondre-react-test-application
 spec:
   environments:
     - name: production
