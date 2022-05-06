@@ -8,9 +8,14 @@ COPY . ./
 RUN npm run build
 
 # production environment
-FROM nginx:stable-alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+FROM nginxinc/nginx-unprivileged:1.21-alpine
+
+COPY --from=build /app/dist /app/web/nginx/html
+
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
-USER 1001
+
+USER 65534
+
 EXPOSE 1024
+
 CMD ["nginx", "-g", "daemon off;"]

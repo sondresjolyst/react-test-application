@@ -12,7 +12,7 @@ export class Api {
    */
   constructor() {
     this.client = null;
-    this.apiUrl = 'http://express-backend-typescript-example.com/api/';
+    this.apiUrl = 'https://backend-sondre-express-test-application-production.playground.radix.equinor.com/api/';
   }
 
   init = () => {
@@ -21,6 +21,6 @@ export class Api {
   };
 
   getFactOfTheDay = () => {
-    return this.init().get('/example/catFact');
+    return this.init().get('catfacts/fact');
   };
 }
