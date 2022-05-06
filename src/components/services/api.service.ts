@@ -21,6 +21,6 @@ export class Api {
   };
 
   getFactOfTheDay = () => {
-    return this.init().get('/example/catFact');
+    return this.init().get('catfacts/fact');
   };
 }
