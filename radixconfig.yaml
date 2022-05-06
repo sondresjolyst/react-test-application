@@ -9,6 +9,7 @@ spec:
         from: master
   components:
     - name: frontend
+      src: .
       dockerfile: prod.Dockerfile
       ports:
        - name: http
