@@ -7,10 +7,13 @@ spec:
     - name: production
       build:
         from: master
+    - name: development
+      build:
+        from: development
   components:
     - name: frontend
-      src: .
-      dockerfile: prod.Dockerfile
+      src: "."
+      # dockerfile: Dockerfile
       ports:
        - name: http
          port: 1024

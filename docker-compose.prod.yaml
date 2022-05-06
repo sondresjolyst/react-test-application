@@ -5,6 +5,6 @@ services:
     container_name: react-test-container
     build:
       context: .
-      dockerfile: prod.Dockerfile
+      dockerfile: Dockerfile
     ports:
       - '1024:80'
