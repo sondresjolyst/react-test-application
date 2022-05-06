@@ -8,7 +8,7 @@ COPY . ./
 RUN npm run build
 
 # production environment
-FROM nginx:stable-alpine
+FROM nginxinc/nginx-unprivileged:1.20-alpine
 
 USER root
 
