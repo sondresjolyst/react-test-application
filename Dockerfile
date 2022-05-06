@@ -8,7 +8,7 @@ COPY . ./
 RUN npm run build
 
 # production environment
-FROM nginxinc/nginx-unprivileged:1.20-alpine
+FROM nginxinc/nginx-unprivileged:1.21-alpine
 
 COPY --from=build /app/dist /app/web/nginx/html
 
