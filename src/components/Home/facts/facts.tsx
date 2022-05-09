@@ -1,40 +1,12 @@
 import React, {Component} from 'react';
 import {Api} from '../../services/api.service';
 import './facts.scss';
-
-type FactState = {
-  facts: {
-    current_page: number;
-    data: [
-      {
-        fact: string;
-        length: number;
-      }
-    ];
-    first_page_url: string;
-    from: number;
-    last_page: number;
-    last_page_url: string;
-    links: [
-      {
-        url: string | null;
-        label: string;
-        active: boolean;
-      }
-    ];
-    next_page_url: string;
-    path: string;
-    per_page: number;
-    prev_page_url: string | null;
-    to: number;
-    total: number;
-  };
-};
+import {FactsState} from './types/FactsState.types';
 
 /**
  * Facts page
  */
-export default class Facts extends Component<{}, FactState> {
+export default class Facts extends Component<{}, FactsState> {
   api = new Api();
 
   /**

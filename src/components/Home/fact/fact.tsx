@@ -2,18 +2,12 @@ import React, {Component} from 'react';
 import {catFact} from '../../models/catfact.models';
 import {Api} from '../../services/api.service';
 import './fact.scss';
-
-type HomeState = {
-  randomFact: {
-    fact: string
-    length: number
-  };
-};
+import {FactState} from './types/FactState.types';
 
 /**
  * Fact page
  */
-export default class Fact extends Component<{}, HomeState> {
+export default class Fact extends Component<{}, FactState> {
   api = new Api();
 
   /**
