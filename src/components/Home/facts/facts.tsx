@@ -70,28 +70,34 @@ export default class Facts extends Component<{}, FactsState> {
           className="
         uk-text-default
         uk-text-lighter
-        "
-        >
+        ">
           Current Page: {this.state.facts.current_page}
         </p>
-        <ul>
-          {this.state.facts.data.map((facts: any, index) => (
-            <li key={index}>{facts.fact}</li>
-          ))}
-        </ul>
+        <table className="uk-table uk-table-striped">
+          <thead>
+            <tr>
+              <th>Facts</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.facts.data.map((facts: any, index) => (
+              <tr key={index}>
+                <td>{facts.fact}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         {this.state.facts.current_page > 1 && (
           <button
             className="uk-button uk-button-primary uk-margin-right"
-            onClick={() => this.fetchFacts(this.state.facts.current_page - 1)}
-          >
+            onClick={() => this.fetchFacts(this.state.facts.current_page - 1)}>
             Previous Page
           </button>
         )}
         {this.state.facts.current_page < this.state.facts.last_page && (
           <button
             className="uk-button uk-button-primary"
-            onClick={() => this.fetchFacts(this.state.facts.current_page + 1)}
-          >
+            onClick={() => this.fetchFacts(this.state.facts.current_page + 1)}>
             Next Page
           </button>
         )}
