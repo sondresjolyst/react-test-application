@@ -63,19 +63,33 @@ export default class Breeds extends Component<{}, BreedsState> {
     return (
       <div className="uk-margin-top">
         <p className="uk-text-large uk-text-bold">Breeds:</p>
-        <ul>
+        <div
+          className="
+        uk-child-width-1-5
+        uk-grid-medium
+        uk-grid-match"
+          uk-grid="true">
           {this.state.breeds.data.map((breeds: any, index) => (
-            <li key={index}>
-              {breeds.breed}
-              <ul>
-                {breeds.coat != '' &&<li>{breeds.coat}</li>}
-                {breeds.country != '' &&<li>{breeds.country}</li>}
-                {breeds.origin != '' &&<li>{breeds.origin}</li>}
-                {breeds.pattern != '' && <li>{breeds.pattern}</li>}
-              </ul>
-            </li>
+            <div key={index}>
+              <div
+                className="
+            uk-card
+            uk-card-default">
+                <div className="uk-card-header">
+                  <h3 className="uk-card-title">{breeds.breed}</h3>
+                </div>
+                <div className="uk-card-body">
+                  <ul>
+                    {breeds.coat != '' && <li>{breeds.coat}</li>}
+                    {breeds.country != '' && <li>{breeds.country}</li>}
+                    {breeds.origin != '' && <li>{breeds.origin}</li>}
+                    {breeds.pattern != '' && <li>{breeds.pattern}</li>}
+                  </ul>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     );
   }
