@@ -12,7 +12,14 @@ export class Api {
    */
   constructor() {
     this.client = null;
-    this.apiUrl = 'https://backend-sondre-express-test-application-production.playground.radix.equinor.com/api/';
+
+    if (process.env.NODE_ENV === 'production') {
+      this.apiUrl = 'https://backend-sondre-express-test-application-production.playground.radix.equinor.com/';
+    } else if (process.env.NODE_ENV === 'development') {
+      this.apiUrl = 'http://localhost:8001/';
+    } else {
+      this.apiUrl = 'http://localhost:8001/';
+    }
   }
 
   init = () => {
@@ -20,7 +27,15 @@ export class Api {
     return this.client;
   };
 
-  getFactOfTheDay = () => {
-    return this.init().get('catfacts/fact');
+  getFact = () => {
+    return this.init().get('api/catfacts/fact');
+  };
+
+  getFacts = () => {
+    return this.init().get('api/catfacts/facts');
+  };
+
+  getBreeds = () => {
+    return this.init().get('api/catfacts/breeds');
   };
 }
