@@ -32,7 +32,6 @@ export default class Fact extends Component<{}, FactState> {
     this.api
         .getFact()
         .then((response: catFact) => {
-        //   console.log(response.data.fact);
           this.setState({
             randomFact: {
               fact: response.data.fact,
