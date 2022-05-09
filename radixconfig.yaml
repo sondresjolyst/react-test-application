@@ -11,9 +11,8 @@ spec:
       build:
         from: development
   components:
-    - name: frontend
+    - name: frontend 
       src: "."
-      # dockerfile: Dockerfile
       ports:
        - name: http
          port: 1024
