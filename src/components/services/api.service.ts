@@ -2,6 +2,8 @@ import axios from 'axios';
 
 /**
  * @return {json} API service that returns JSON
+ * @param {number} pageNumber fetchFacts(pageNumber) is used to get a specified
+ * site
  */
 export class Api {
   client: any;
@@ -23,7 +25,10 @@ export class Api {
   }
 
   init = () => {
-    this.client = axios.create({baseURL: this.apiUrl, timeout: 31000});
+    this.client = axios.create({
+      baseURL: this.apiUrl,
+      timeout: 31000,
+    });
     return this.client;
   };
 
@@ -31,8 +36,11 @@ export class Api {
     return this.init().get('api/catfacts/fact');
   };
 
-  getFacts = () => {
-    return this.init().get('api/catfacts/facts');
+  getFacts = (pageNumber?: number) => {
+    const params = {
+      page: pageNumber,
+    };
+    return this.init().get('api/catfacts/facts', {params});
   };
 
   getBreeds = () => {
