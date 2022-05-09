@@ -33,14 +33,6 @@ function App(): any {
           </div>
         </div>
       </Router>
-      <footer
-        className="uk-section-default
-      uk-padding uk-padding-remove-bottom"
-      >
-        <div className="uk-text-center">
-          <p>React-Test 2022</p>
-        </div>
-      </footer>
     </div>
   );
 }
