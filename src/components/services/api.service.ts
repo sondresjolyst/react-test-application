@@ -2,12 +2,8 @@ import axios from 'axios';
 
 /**
  * @return {json} API service that returns JSON
-<<<<<<< HEAD
  * @param {number} pageNumber fetchFacts(pageNumber) is used to get a specified
  * site
-=======
- * @param {number} pageNumber fetchFacts(pageNumber) is used to get more pages
->>>>>>> e4973f327a8dfc82f7fb6167e672827bef5ce944
  */
 export class Api {
   client: any;
