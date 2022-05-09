@@ -14,13 +14,13 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <div className="uk-container uk-container-xlarge">
+        <div className='uk-container uk-container-xlarge'>
           <Fact />
         </div>
-        <div className="uk-container uk-container-xlarge">
+        <div className='uk-container uk-container-xlarge'>
           <Facts />
         </div>
-        <div className="uk-container uk-container-xlarge">
+        <div className='uk-container uk-container-xlarge'>
           <Breeds />
         </div>
       </div>

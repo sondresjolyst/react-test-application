@@ -13,26 +13,26 @@ export default class App extends Component {
    */
   render() {
     return (
-      <div className="app">
+      <div className='app'>
         <Router>
-          <div className="page-content">
-            <nav className="uk-navbar-container" uk-navbar="true">
-              <div className="uk-navbar-left">
-                <a className="uk-navbar-item uk-logo">React Test</a>
-                <ul className="uk-navbar-nav">
-                  <li className="uk-active">
-                    <Link to="/">Home</Link>
+          <div className='page-content'>
+            <nav className='uk-navbar-container' uk-navbar='true'>
+              <div className='uk-navbar-left'>
+                <a className='uk-navbar-item uk-logo'>React Test</a>
+                <ul className='uk-navbar-nav'>
+                  <li className='uk-active'>
+                    <Link to='/'>Home</Link>
                   </li>
                   <li>
-                    <Link to="/foo">foo</Link>
+                    <Link to='/foo'>foo</Link>
                   </li>
                 </ul>
               </div>
             </nav>
-            <div className="route-content">
+            <div className='route-content'>
               <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/foo" element={<Foo />}></Route>
+                <Route path='/' element={<Home />}></Route>
+                <Route path='/foo' element={<Foo />}></Route>
               </Routes>
             </div>
           </div>
