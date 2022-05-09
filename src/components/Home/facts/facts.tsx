@@ -5,6 +5,8 @@ import {FactsState} from './types/FactsState.types';
 
 /**
  * Facts page
+ * @param {number} pageNumber fetchFacts(pageNumber) is used to get a specified
+ * site
  */
 export default class Facts extends Component<{}, FactsState> {
   api = new Api();
@@ -49,8 +51,8 @@ export default class Facts extends Component<{}, FactsState> {
     this.fetchFacts();
   };
 
-  fetchFacts = () => {
-    this.api.getFacts().then((response: any) => {
+  fetchFacts = (pageNumber?: number) => {
+    this.api.getFacts(pageNumber).then((response: any) => {
       this.setState({
         facts: response.data,
       });
@@ -64,11 +66,35 @@ export default class Facts extends Component<{}, FactsState> {
     return (
       <div className="uk-margin-top">
         <p className="uk-text-large uk-text-bold">Facts:</p>
+        <p
+          className="
+        uk-text-default
+        uk-text-lighter
+        "
+        >
+          Current Page: {this.state.facts.current_page}
+        </p>
         <ul>
           {this.state.facts.data.map((facts: any, index) => (
             <li key={index}>{facts.fact}</li>
           ))}
         </ul>
+        {this.state.facts.current_page > 1 && (
+          <button
+            className="uk-button uk-button-primary uk-margin-right"
+            onClick={() => this.fetchFacts(this.state.facts.current_page - 1)}
+          >
+            Previous Page
+          </button>
+        )}
+        {this.state.facts.current_page < this.state.facts.last_page && (
+          <button
+            className="uk-button uk-button-primary"
+            onClick={() => this.fetchFacts(this.state.facts.current_page + 1)}
+          >
+            Next Page
+          </button>
+        )}
       </div>
     );
   }
