@@ -48,8 +48,8 @@ export default class Breeds extends Component<{}, BreedsState> {
     this.fetchBreeds();
   };
 
-  fetchBreeds = () => {
-    this.api.getBreeds().then((response: any) => {
+  fetchBreeds = (pageNumber?: number) => {
+    this.api.getBreeds(pageNumber).then((response: any) => {
       this.setState({
         breeds: response.data,
       });
@@ -89,6 +89,26 @@ export default class Breeds extends Component<{}, BreedsState> {
               </div>
             </div>
           ))}
+        </div>
+        <div className='uk-margin-top'>
+          {this.state.breeds.current_page > 1 && (
+            <button
+              className='uk-button uk-button-primary uk-margin-right'
+              onClick={() =>
+                this.fetchBreeds(this.state.breeds.current_page - 1)
+              }>
+              Previous Page
+            </button>
+          )}
+          {this.state.breeds.current_page < this.state.breeds.last_page && (
+            <button
+              className='uk-button uk-button-primary'
+              onClick={() =>
+                this.fetchBreeds(this.state.breeds.current_page + 1)
+              }>
+              Next Page
+            </button>
+          )}
         </div>
       </div>
     );

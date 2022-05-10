@@ -43,7 +43,10 @@ export class Api {
     return this.init().get('api/catfacts/facts', {params});
   };
 
-  getBreeds = () => {
-    return this.init().get('api/catfacts/breeds');
+  getBreeds = (pageNumber?: number) => {
+    const params = {
+      page: pageNumber,
+    };
+    return this.init().get('api/catfacts/breeds', {params});
   };
 }
