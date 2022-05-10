@@ -16,6 +16,6 @@ COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 USER 65534
 
-EXPOSE 1024
+EXPOSE 3000
 
 CMD ["nginx", "-g", "daemon off;"]

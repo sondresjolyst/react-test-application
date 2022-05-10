@@ -1,25 +1,34 @@
-# kubernetes-test-application
+# react-test-application
+This project is the frontend for [# Express-Backend-TypeScript-Example](https://github.com/sondresjolyst/Express-Backend-TypeScript-Example)
 
-## Available Scripts
+## Quick Start
+Install the dependencies.
 
-In the project directory, you can run:
+    $ npm i
+    
+Start the server:
 
-### `npm start`
+    $ npm start
+    
+View the website at: [http://localhost:3000](http://localhost:3000)
+ 
+## Radixconfig
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Name			| Branch		|
+|---------------|---------------|
+| production	| master		|
+| development	| development   |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Docker
 
-### `npm run build`
+| Container Name		| Dockerfile	| External port	| Internal port	|
+|-----------------------|---------------|---------------|---------------|
+| react-test-container	| Dockerfile	| 3000			| 80			|
 
-Builds the app for production to the `dist` folder.
+### Build
 
-## Docker build
+    docker build -t react-test-application
 
-### Build and test dev
-`docker-compose -f docker-compose.yaml up -d --build`
+### Build and start production
 
-### Build and test production
-`docker-compose -f docker-compose.prod.yaml up -d --build`
+    docker-compose -f docker-compose.prod.yaml up -d --build
