@@ -23,7 +23,7 @@ View the website at: [http://localhost:3000](http://localhost:3000)
 
 | Container Name		| Dockerfile	| External port	| Internal port	|
 |-----------------------|---------------|---------------|---------------|
-| react-test-container	| Dockerfile	| 3000			| 80			|
+| react-test-container	| Dockerfile	| 3000			| 3000			|
 
 ### Build
 
