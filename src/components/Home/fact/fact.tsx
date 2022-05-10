@@ -48,8 +48,8 @@ export default class Fact extends Component<{}, FactState> {
   render() {
     return (
       <div>
-        <p className="uk-text-large uk-text-bold">Fact:</p>
-        <table className="uk-table uk-table-striped">
+        <p className='uk-text-large uk-text-bold'>Fact:</p>
+        <table className='uk-table uk-table-striped'>
           <thead>
             <tr>
               <th>Random Fact:</th>
@@ -63,7 +63,7 @@ export default class Fact extends Component<{}, FactState> {
         </table>
         <p></p>
         <button
-          className="uk-button uk-button-primary"
+          className='uk-button uk-button-primary'
           onClick={this.fetchFact}>
           Get new fact
         </button>

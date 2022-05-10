@@ -64,16 +64,16 @@ export default class Facts extends Component<{}, FactsState> {
    */
   render() {
     return (
-      <div className="uk-margin-top">
-        <p className="uk-text-large uk-text-bold">Facts:</p>
+      <div className='uk-margin-top'>
+        <p className='uk-text-large uk-text-bold'>Facts:</p>
         <p
-          className="
+          className='
         uk-text-default
         uk-text-lighter
-        ">
+        '>
           Current Page: {this.state.facts.current_page}
         </p>
-        <table className="uk-table uk-table-striped">
+        <table className='uk-table uk-table-striped'>
           <thead>
             <tr>
               <th>Facts</th>
@@ -89,14 +89,14 @@ export default class Facts extends Component<{}, FactsState> {
         </table>
         {this.state.facts.current_page > 1 && (
           <button
-            className="uk-button uk-button-primary uk-margin-right"
+            className='uk-button uk-button-primary uk-margin-right'
             onClick={() => this.fetchFacts(this.state.facts.current_page - 1)}>
             Previous Page
           </button>
         )}
         {this.state.facts.current_page < this.state.facts.last_page && (
           <button
-            className="uk-button uk-button-primary"
+            className='uk-button uk-button-primary'
             onClick={() => this.fetchFacts(this.state.facts.current_page + 1)}>
             Next Page
           </button>
