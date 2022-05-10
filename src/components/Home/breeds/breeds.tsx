@@ -5,6 +5,8 @@ import {BreedsState} from './types/BreedsState.types';
 
 /**
  * Breeds page
+ * @param {number} pageNumber fetchBreeds(pageNumber) is used to get a specified
+ * site
  */
 export default class Breeds extends Component<{}, BreedsState> {
   api = new Api();
