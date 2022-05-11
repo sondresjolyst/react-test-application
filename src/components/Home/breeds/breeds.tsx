@@ -15,7 +15,7 @@ export default class Breeds extends Component<{}, BreedsState> {
    * Constructor
    * @param {interface} props interface
    */
-  constructor(props: any) {
+  constructor(props: {}) {
     super(props);
     this.state = {
       breeds: {

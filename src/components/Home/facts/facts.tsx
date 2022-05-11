@@ -11,11 +11,13 @@ import {FactsState} from './types/FactsState.types';
 export default class Facts extends Component<{}, FactsState> {
   api = new Api();
 
+  private num: number = 0;
+
   /**
    * Constructor
    * @param {interface} props interface
    */
-  constructor(props: any) {
+  constructor(props: {}) {
     super(props);
     this.state = {
       facts: {
