@@ -18,9 +18,9 @@ export class Api {
     if (process.env.NODE_ENV === 'production') {
       this.apiUrl = 'https://backend-sondre-express-test-application-production.playground.radix.equinor.com/';
     } else if (process.env.NODE_ENV === 'development') {
-      this.apiUrl = 'http://localhost:8001/';
+      this.apiUrl = 'http://localhost:1025/';
     } else {
-      this.apiUrl = 'http://localhost:8001/';
+      this.apiUrl = 'http://localhost:1025/';
     }
   }
 

@@ -14,7 +14,7 @@ export default class Fact extends Component<{}, FactState> {
    * Constructor
    * @param {interface} props interface
    */
-  constructor(props: any) {
+  constructor(props: {}) {
     super(props);
     this.state = {
       randomFact: {
