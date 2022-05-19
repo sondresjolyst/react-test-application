@@ -31,8 +31,9 @@ export default class App extends Component {
             </nav>
             <div className='route-content'>
               <Routes>
-                <Route path='/' element={<Home />}></Route>
-                <Route path='/foo' element={<Foo />}></Route>
+                <Route path='/' element={<Home />} />
+                <Route path='/foo' element={<Foo />} />
+                <Route path='*' element={<Home /> } />
               </Routes>
             </div>
           </div>
