@@ -6,10 +6,7 @@ spec:
   environments:
     - name: production
       build:
-        from: master
-    - name: development
-      build:
-        from: development
+        from: radix-local-dev
   components:
     - name: frontend 
       src: "."
